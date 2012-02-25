@@ -10,6 +10,8 @@ if( typeof module !== "undefined" && module.exports ){
     notStrictEqual = assert.notStrictEqual;
 
   _.mixin( require('../lib/underscore.deferred') );
+} else {
+    _.mixin(_.deferred);
 }
 
 test("its should be part of Underscore", function() {
